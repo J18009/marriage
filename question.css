@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+/************************************
+** CSSでタブ表示
+************************************/
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    /*padding-left: 150px;  */
+}
+
+body{
+  font-size: 30px;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+  .fadeIn {
+  animation-name: fadeIn;
+  animation-fill-mode:backwards;
+  animation-duration:2s;
+  animation-timing-function:ease;
+  animation-direction:normal;
+  }
+
+/* フェードイン効果 */
+  @keyframes fadeIn{
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .title1{
+      animation-delay: 0.3s;
+  }
+  .title2{
+      animation-delay: 1.5s;
+  }
+  .title3{
+      animation-delay: 3.0s;
+  }
+  .title4{
+      animation-delay: 3.8s;
+  }
+
+  .form{
+    color:blue;
+  }
+
+  .fin{
+    width: 50%;
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    left:50%;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+    background-color: #2791d4;
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid #2791d4;
+    text-decoration: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  }
+
+  .fin:hover {
+      background-color: #fff;
+      color: #2791d4;
+      -webkit-transition: 0.7s;
+      -moz-transition: 0.7s;
+      -o-transition: 0.7s;
+      transition: 0.7s;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
+  html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .btn,
+  button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+  }
+  button.btn-flat {
+    overflow: hidden;
+    padding: 1.0rem 4rem;
+    color: #000000;
+    border-radius: 0;
+    background: rgba(#ffffff, 1);
+  }
+
+  button.btn-flat span {
+    position: relative;
+  }
+
+  button.btn-flat:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-96%);
+    transform: translateX(-96%);
+    background: #2e9beb;
+  }
+
+  button.btn-flat:hover:before {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    color:#fff;
+  }

@@ -1,0 +1,60 @@
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
+
+  table tr{
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+  }
+
+  table tr:hover{
+    background-color: #d4f0fd;
+  }
+
+  table th,table td{
+    text-align: center;
+    width: 25%;
+    padding: 15px 0;
+  }
+
+  .idcolumn{
+    width: 100px;
+  }
+
+  .namecolumn{
+    width: 200px;
+  }
+
+  .agecolumn{
+    width: 100px;
+  }
+
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: #a52a2a;
+    font-weight: bold;
+  }
+
+  /* .button, .like{
+  color: #000;
+  font-weight: bold;
+  padding: 14px 19px;
+  border: solid 1px #000;
+  }
+  */
+
+  .button_conclude{
+    text-align: center;
+  }
+
+  h1{
+    text-align: center;
+  }

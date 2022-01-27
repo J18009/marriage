@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+input[type="text"]{
+    width: 150px;
+    height: 25px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+#plusimg{
+    text-align: center;
+        cursor: pointer;
+}
+
+#add{
+    position: relative;
+}
+
+.choosebox{
+    width: 150px;
+    height: 30px;
+}
+
+input.year{
+   width:100px;
+}
+
+    width: 80%;
+    margin: auto;
+
+table td {
+    border: solid 1px #cecece;
+    padding: 10px 15px;
+    width: 300px;
+    overflow-wrap:  break-word;
+    text-align: center;
+}
+
+button.submit{
+    width: 250px;
+    height: 50px;
+    font-size: 30px;
+
+    display       : inline-block;
+    border-radius : 2%;          /* 角丸       */
+    font-size     : 17pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 16px;   /* 余白       */
+    background    : rgba(204, 204, 204, 0.87);     /* 背景色 */
+    color         : #000000;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    opacity       : 0.9;         /* 透明度     */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 1px 1px 3px #666666;  /* 影の設定 */
+}
+
+.button_conclude{
+    text-align: center;
+  }
+
+.familytable{
+    /* margin-left: auto;
+    margin-right: auto; */
+    .max-width: 900px;
+
+}
+
+.family_th{
+    font-size: 20px;
+}
+
+.familytable td{
+    border: solid 1px #cecece;
+    padding: 10px 15px;
+    width: 100px;
+    overflow-wrap:  break-word;
+    text-align: center;
+}
+
+/* ボタンデザイン */
+
+a.btn-radius-solid {
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  color: #212529;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+  background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+  box-shadow: inset 1px 1px 1px #fff;
+}
+
+a.btn-radius-solid:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fdfbfb), to(#ebedee));
+  background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+}

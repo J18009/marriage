@@ -1,0 +1,71 @@
+body{
+    text-align: center;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+
+/* 見出しのスタイル設定 */
+h1{
+    font-size: 80px;
+    text-align: center;
+}
+
+
+a{
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;      /* 基本リンクに下線をつけない */  
+}
+
+a:hover{
+    color: #a52a2a;
+    font-weight: bold; 
+}
+
+div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+img{
+    width: 125px;
+}
+
+img:hover{
+    border: 5px solid #a52a2a;
+    box-sizing: border-box;
+}
+
+#test{
+    width: 125px;
+    height: 250px;
+}
+
+button {
+    -webkit-writing-mode: horizontal-tb !important;
+    -webkit-appearance: button;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
+    text-rendering: auto;
+    color: initial;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    text-align: center;
+    font: 400 15px system-ui;
+    width: 150px;
+    height: 50px;
+}
+
+div#test a{
+    font-size: initial;
+    text-decoration: none;      /* 基本リンクに下線をつけない */  
+}
+
+
+div#test a:hover{
+    font-size: initial;
+    color: #000;
+    font-weight: normal;
+}

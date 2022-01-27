@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+  /* 全体のフォント設定 */
+  body{
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 30px;
+  }
+
+  /* 見出しのスタイル設定 */
+  h1{
+    font-size: 80px;
+    text-align: center;
+  }
+
+  /* 貼ってある別リンクのスタイル設定 */
+  .another_link{
+    font-size: 30px;
+    text-align: center;
+  }
+
+  a{
+    color: #000;
+    text-decoration: none;      /* 基本リンクに下線をつけない */
+  }
+
+  a:hover{
+    color: #a52a2a;
+    font-weight: bold;
+  }
+
+  /* 婚活者詳細(marriage_detail.php)の婚活者アイコンのスタイル設定 */
+  img.marriage_icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 500px;
+  }
+
+  input[type=button]{
+    cursor: pointer;
+  }
+
+  /* テーブル全体のスタイルを管理する記述 */
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+  }
+
+  /* 婚活者詳細(marriage_detail.php)のテーブルのスタイル設定 */
+  table .detail{
+    width: 1600px;
+  }
+
+  /* テーブルの行のスタイル設定 */
+  table tr{
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+  }
+
+  tr:hover{
+    background-color: #e6e6e6;
+  }
+
+  /* テーブルの見出しとテーブルセルのスタイル設定 */
+  table th,table td{
+    text-align: center;
+    width: 25%;
+    padding: 15px 0;
+    font-size: 50px;
+  }
+
+  /* 特定の文字列についてのスタイル設定 */
+  .mes{
+    text-align: center;
+    font-size: 40px;
+  }
+
+  /* 婚活者一覧(home.php) にて、婚活者詳細(marriage_detail.php)へ遷移しやすいよう修正*/
+  a.widelink{
+    display: block;
+  }
+
+  /* 色のついた下線をひくための設定 */
+  .colorant{
+    background: linear-gradient(transparent 70%, #ff8080 70%);
+  }
+
+  /* リンクの下線を見せるための設定 */
+  .drawLine{
+    text-decoration: underline;
+  }
+
+  /* 以下婚活者一覧(home.php)の各見出しの横幅設定 */
+
+  .idcolumn{    /* 婚活者ID見出し */
+    width: 180px;
+  }
+
+  .namecolumn{    /* 婚活者名見出し */
+    width: 400px;
+  }
+
+  .agecolumn{   /* 婚活者年齢見出し */
+    width: 160px;
+  }
+
+  .marriage_icon_h{
+      width: 100px;
+      height: 100px;
+  }
+
+  /* input要素のtype=button, submitのみに反映されるスタイル設定 */
+  input[type="button"], input[type="submit"]{
+  color: #000;
+  /* font-weight: bold; */
+  font-size: 30px;
+  /* padding: 14px 19px; */
+  width: 200px;
+  height: 70px;
+  border: solid 1px #000;
+  }
+
+  /* 複数のボタンをまとめたクラスのスタイル設定 */
+  .button_conclude{
+    text-align: center;
+  }
+
+  #radar{
+    width: 400px;
+  }

@@ -1,0 +1,10 @@
+div{
+  display:inline-block;
+  padding:20px;
+  color:#FFF;
+  background:#000;
+}
+
+.selected{
+  background:#000FFF;
+}

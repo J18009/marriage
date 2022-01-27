@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+  body{
+    font-size: 30px;
+    font-family: 'Noto Serif JP', sans-serif;
+  }
+
+  h1{
+    font-size: 50px;
+    /* text-align: center;  */
+    /*padding-left: 150px;  */
+  }
+
+  /* エラー文の文字色設定 */
+  .error{
+    color:#ff0000;
+  }
+
+  .another_link{
+    font-size: 20px;
+    padding-left: 450px;
+    text-align: center;
+  }
+
+  .next_step{
+    left:35%;
+  }
+
+  .prev_step{
+    left:20%;
+  }
+
+  .first_step{
+    left:40%;
+  }
+
+  .again{
+    bottom: 0%;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table th ,
+  table td {
+    border: solid 1px #cecece;
+    padding: 10px 15px;
+  }
+  table th {
+    text-align: left;
+    background-color: #f9f9f9;
+    z-index: -1;
+    max-width: 30%;
+  }
+
+  .fit {
+    display:block;
+  }
+
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: #a52a2a;
+    font-weight: bold;
+  }
+
+  .openage{
+    display: none;
+  }
+
+  .marriageinfo{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .marriage_icon{
+    /* margin-left: auto;
+    margin-right: auto; */
+    text-align: center;
+  }
+
+  .impchara{
+    text-align: center;
+  }
+
+  input[type="date"] {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .input[type="text"] {
+    width: 230px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    width: 2em;
+    height: 2em;
+  }
+
+  .back, .next{
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+  }
+
+  /* タブの外枠 */
+  .tabs {
+      margin-top: 12px;
+  }
+
+  .selectbox select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+
+    /* display: block; */
+    width: 300px;
+    /* max-width: 320px; */
+    height: 30px;
+    /* float: right; */
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 20px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -ms-word-break: normal;
+    word-break: normal;
+  }
+
+  select::-ms-expand {
+    display: none;
+    }
+
+  .selectdiv:after {
+    content: '<>';
+    font: 50px "Consolas", monospace;
+    color: #333;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 11px;
+    /*Adjust for position however you want*/
+
+    top: 18px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #999;
+    /*left line */
+
+    position: absolute;
+    pointer-events: none;
+  }
+
+  /* .selectbox{
+   font-size: 60px;
+  } */
+
+  /* タブのスタイル */
+  .tabs .tab-label {
+    display: inline-block;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    /* border: 1px solid #999; */
+    background-color: #f3f3f3;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 3px 6px;
+    border-bottom: none;
+    /* font-size: 60px; */
+
+  }
+
+  /* タブにマウスカーソルがのったときフッター */
+  .tabs .tab-label:hover {
+    opacity: 0.7;
+  }
+
+  /* ラジオボタンと内容を非表示 */
+  .tabs input[name="tab-radio"],
+  .tabs .tab-content {
+    display: none;
+  }
+
+  .tab-content{
+    border: 0px none;
+    width: 1100px;
+    text-align: left;
+    /* font-size: 50px; */
+  }
+
+  /* タブ内容のスタイル */
+  .tabs .tab-content{
+    padding: 10px;
+    min-height: 200px;
+  }
+
+  /* 選択されているタブのコンテンツのみを表示 */
+  .tabs #tab-1:checked ~ .tab-1-content,
+  .tabs #tab-2:checked ~ .tab-2-content,
+  .tabs #tab-3:checked ~ .tab-3-content,
+  .tabs #tab-4:checked ~ .tab-4-content,
+  .tabs #tab-5:checked ~ .tab-5-content,
+  .tabs #tab-6:checked ~ .tab-6-content {
+    display: block;
+  }
+
+  /* 選択されているタブのスタイルを変える */
+  .tabs input[name="tab-radio"]:checked + .tab-label {
+    background-color: #fff;
+  }
+
+    /* CSSアニメーションの指定 */
+    th,td,dt,{
+    animation: SlideIn 1.6s;
+  }
+
+  /* CSSアニメーションの設定 */
+  @keyframes SlideIn {
+    0% {
+      opacity: 0;/*初期状態では透明に*/
+      transform: translateX(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+/* 婚活者アイコン選択肢の設定 */
+  input[name=marriage_icon]+label:before{
+      content: "";
+      display: inline-block;
+      background-size: contain;
+      width: 120px;
+      height: 120px;
+  }
+  .selectIcon1[type=radio][value="1"]+label:before{
+      background-image: url(icon/1.png);
+  }
+  .selectIcon2[type=radio][value="2"]+label:before{
+      background-image: url(icon/2.png);
+  }
+  .selectIcon3[type=radio][value="3"]+label:before{
+      background-image: url(icon/3.png);
+  }
+  .selectIcon4[type=radio][value="4"]+label:before{
+      background-image: url(icon/4.png);
+  }
+  .selectIcon5[type=radio][value="5"]+label:before{
+      background-image: url(icon/5.png);
+  }
+  .selectIcon6[type=radio][value="6"]+label:before{
+      background-image: url(icon/6.png);
+  }
+  .selectIcon7[type=radio][value="7"]+label:before{
+      background-image: url(icon/7.png);
+  }
+  .selectIcon8[type=radio][value="8"]+label:before{
+      background-image: url(icon/8.png);
+  }
+  input[name=marriage_icon]:checked+label::before{
+      border: 3px solid #f70000;
+      box-sizing: border-box;
+  }
+  input[name=marriage_icon]{
+      display: none;
+  }
+
+
+  /*年齢計算ボタンデザイン*/
+
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
+    .btn,
+    button.btn-border {
+      font-size: 1.0rem;
+      font-weight: 600;
+      line-height: 1.5;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      color: #212529;
+      border-radius: 0.5rem;
+    }
+
+    button.btn-border {
+      margin-bottom: 12px;
+      padding: 0;
+
+      -webkit-transition: all 0.3s;
+
+      transition: all 0.3s;
+
+      border-radius: 0;
+    }
+
+    button.btn-border span {
+      position: relative;
+
+      display: block;
+
+      padding: 1.25rem 3rem;
+
+      color: #000;
+      border: 2px solid #000;
+      border-radius: 0.5rem;
+      background: #fff;
+    }
+
+    button.btn-border:before {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 14px;
+
+      content: "";
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+
+      border: 2px solid #000;
+      border-top: 1px solid #000;
+      border-radius: 0 0 0.5rem 0.5rem;
+      background-image: -webkit-repeating-linear-gradient(
+        135deg,
+        #000,
+        #000 1px,
+        transparent 2px,
+        transparent 5px
+      );
+      background-image: repeating-linear-gradient(
+        -45deg,
+        #000,
+        #000 1px,
+        transparent 2px,
+        transparent 5px
+      );
+      background-size: 7px 7px;
+
+      -webkit-backface-visibility: hidden;
+
+      backface-visibility: hidden;
+    }
+
+    button.btn-border:hover {
+      -webkit-transform: translate(0, 3px);
+      transform: translate(0, 3px);
+    }
+
+    button.btn-border:hover:before {
+      bottom: -5px;
+    }
+
+    button.btn-border:active {
+      -webkit-transform: translate(0, 7px);
+      transform: translate(0, 7px);
+    }
+
+    button.btn-border:active:before {
+      bottom: -1px;
+    }
+
+
+    /*「次へ」ボタンデザイン*/
+    a.confirm,
+    button.confirm {
+      font-size: 1.0rem;
+      font-weight: 900;
+      line-height: 1.5;
+      position: relative;
+      display: inline-block;
+      padding: 1rem 4rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      color: #212529;
+      border-radius: 0.5rem;
+    }
+    a.confirm-border,
+    button.confirm-border {
+      border: 2px solid #000;
+      border-radius: 0;
+      background: #fff;
+
+      -webkit-transform-style: preserve-3d;
+
+      transform-style: preserve-3d;
+    }
+
+    a.confirm-border:before,
+    button.confirm-border:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 15px;
+      height: 100%;
+
+      content: '';
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      -webkit-transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0);
+
+      border-radius: 0 50% 50% 0;
+      background: #000;
+    }
+
+    a.confirm-border:hover:before,
+    button.confirm-border:hover:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
+      line-height: 40px;
+
+      width: 40px;
+      height: 40px;
+
+      content: '→';
+      -webkit-transform: translateX(460%) translateY(1.0rem);
+      transform: translateX(490%) translateY(.5rem);
+
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    /*「戻る」ボタンデザイン*/
+    a.back {
+      font-size: 1.0rem;
+      font-weight: 900;
+      line-height: 1.5;
+      position: relative;
+      /* display: inline-block; */
+      padding: 1rem 4rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      color: #212529;
+      border-radius: 0.5rem;
+    }
+    a.back-border {
+      border: 2px solid #000;
+      border-radius: 0;
+      background: #fff;
+
+      -webkit-transform-style: preserve-3d;
+
+      transform-style: preserve-3d;
+    }
+
+    a.back-border:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 15px;
+      height: 100%;
+
+      content: '';
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      -webkit-transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0);
+
+      border-radius: 50% 0% 0% 50%;
+      background: #000;
+    }
+
+    a.back-border:hover:before{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bolder;
+      line-height: 40px;
+
+      width: 40px;
+      height: 40px;
+
+      content: '↩';
+      -webkit-transform: translateX(-480%) translateY(1.0rem);
+      transform: translateX(-490%) translateY(.5rem);
+
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    /* 確認画面：「登録する」ボタン */
+    button.submit {
+      font-size: 1.2rem;
+      font-weight: 900;
+      line-height: 1.5;
+      position: relative;
+      display: inline-block;
+      padding: 1.2rem 5rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      color: #212529;
+      left:23%;
+      border-radius: 0.5rem;
+    }
+    button.submit-border {
+      border: 2px solid #000;
+      border-radius: 0;
+      background: #fff;
+
+      -webkit-transform-style: preserve-3d;
+
+      transform-style: preserve-3d;
+    }
+
+    button.submit-border:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 15px;
+      height: 100%;
+
+      content: '';
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      -webkit-transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0);
+
+      border-radius: 0 50% 50% 0;
+      background: #000;
+    }
+
+    button.submit-border:hover:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
+      line-height: 40px;
+
+      width: 40px;
+      height: 40px;
+
+      content: '✔';
+      -webkit-transform: translateX(460%) translateY(1.0rem);
+      transform: translateX(460%) translateY(.5rem);
+
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    /*確認画面「入力画面へ戻る」ボタン*/
+    button.back {
+      font-size: 1.0rem;
+      font-weight: 900;
+      line-height: 1.5;
+      position: relative;
+      display: inline-block;
+      padding: 0.5rem 0.01rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      letter-spacing: 0.1em;
+    }
+    button.back-border {
+       border: 2px solid #000;
+       border-radius: 0;
+       background: #fff;
+       -webkit-box-shadow: 4px 4px 0 #000;
+       box-shadow: 4px 4px 0 #000;
+     }
+     button.back-border:hover {
+       -webkit-box-shadow: -4px -4px 0 #000;
+       box-shadow: -6px 4px 0 #000;
+       background:grey;
+       color:#fff;
+     }

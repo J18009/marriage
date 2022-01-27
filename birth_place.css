@@ -1,0 +1,109 @@
+/* 居住地入力機能全体のCSS設定 */
+.townList2 {
+	list-style-type: none;	/* ul要素の●(黒丸)を非表示にする */
+	display: flex;
+	height: 2rem;
+	margin-right: auto;
+	width: 250px;
+	height: 50px;
+	font-size: 20px;
+}
+
+/*第一階層の基本CSS設定*/
+.townList2 li {
+	list-style: none;
+	position: relative;
+}
+
+.townList2 > li {
+	width: 100%;
+}
+
+.townList2 li div {
+	background: #f5f5f5;
+	border: 1px solid #696969;
+	color: #696969;
+	display: block;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* 第二階層の基本CSS設定 */
+/* リスト制御用CSS */
+.townList2 li li {
+	z-index: 100;
+	height: 0;
+	overflow: hidden;
+	transition: .5s;
+}
+
+/*第三階層以降のCSS設定*/
+/* リスト制御用CSS */
+.townList2 li ul li ul {
+	left: 170px;
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* 選択用ラジオボタンのCSS設定	ここから */
+.btn_label2 {
+	background: #f5f5f5;
+	border: 1px solid #696969;
+	color: #696969;
+	/* display: block; */
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	display: inline-block;
+    border-radius: 3px;
+}
+
+/* デフォルトのラジオボタン○(白丸)を非表示にする */
+.btn_input2{
+	clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+/* ラジオボタンにカーソルを合わせたとき */
+.btn_input2:hover + .btn_label2 {
+    background: #e6e6e6;
+}
+
+/* ラジオボタンを選択したとき */
+.btn_input2:checked + .btn_label2 {
+    background: #98605e;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+/* 選択用ラジオボタンのCSS設定	ここまで */
+
+
+/* リスト展開用CSS */
+.townList2 li:hover > ul > li {
+	height: 2rem;
+	overflow: visible;
+}
+
+/* リストの各要素 */
+.townList2 li li div {
+	border-top: 1px solid #696969;
+}
+
+.townList2 li li div:hover {
+	background: #98605e;
+    color: #fff;
+	text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+
+/* 選択後に表示される居住地のCSS設定 */
+div.townname2{
+	padding-left: 35px;
+	padding-top: 60px;
+	font-size: 25px;
+}
